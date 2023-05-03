@@ -1,0 +1,110 @@
+% document class =================================================================
+\documentclass[10pt,fleqn,a4paper]{article}
+%!TEX program = shell-escape
+% libraries and preamble =========================================================
+\include{preamble}
+\include{programming}
+\include{data}
+% document class =================================================================
+\begin{document}
+  \pgfplotsset{compat=1.11} % tikz -----------------------------------------------
+  \begin{paracol}{2}
+    \begin{adjustwidth}{5mm}{38mm} % Left Column =================================
+      \head % Page 1 -------------------------------------------------------------
+      \cvsection{Skills}{45mm}
+        \cvsubsection{Profile}
+          \smartdiagram[bubble diagram]{
+            \textbf{Research},
+            \textbf{skill 1},
+            \textbf{skill 2},
+            \textbf{skill 3},
+            \textbf{skill 4},
+            \textbf{skill 5}
+          }
+
+        \cvsubsection{Language}
+          \lang{English}{Read fluent $\bullet$ Write fluent $\bullet$ Speaks Well}
+          \lang{Portuguese}{Read fluent $\bullet$ Write fluent $\bullet$ Speaks fluent}
+          \lang{Spanish}{native}
+        \cvsubsection{Software}
+          {\footnotesize $0 \; LOC$ \Arrow{25mm} $5000 \; LOC$}
+
+          \soft{{Python  $\bullet$  R $\bullet$  \large \LaTeX }}{4.2}
+          \soft{{ MS Office $\bullet$ MS Excel }}{2.9}
+          \soft{{Autocad }}{2.5}
+          \soft{{C  $\bullet$  Java}}{1.7}
+      \newpage 
+      \head % Page 2 -------------------------------------------------------------
+      \cvsection{Certifications}{26mm}
+        \cvsubsection{Online Specializations}
+          \specialization{Machine Learning on Google Cloud}
+            {https://coursera.org}
+            {08/2020}
+            {Coursera - Google}
+            {courses:
+            \begin{itemize}[leftmargin=*]
+              \item Launching into Machine Learning
+              \item How Google Does Machine Learning
+              \item Feature Engineering
+              \item TensorFlow on Google Cloud
+              \item Machine Learning in the Enterprise
+            \end{itemize}
+          }
+
+        \cvsubsection{Courses}
+          \course{Course 1}
+            {08/2012 - 40 Hours}
+            {Nasa}
+          \course{Course 2}
+            {08/2012 - 40 Hours}
+            {Nasa}
+          \course{Course 3}
+            {08/2012 - 40 Hours}
+            {Nasa}
+          \course{Course 4}
+            {08/2012 - 40 Hours}
+            {Nasa}
+
+    \end{adjustwidth} 
+    \switchcolumn
+    \begin{adjustwidth}{-38mm}{5mm} % Right Column ===============================
+      \section*{Education}
+        \begin{tabularx}{110mm}{l l r}
+
+          \education{2017}{Currently}{MSc. Biology}
+          {\unicamp}{Brazil}
+    
+          \education{2006}{2013}{Eng. Mechanical Engineering.}
+          {\unicamp}{Colombia}
+        \end{tabularx}
+      \section*{Research}
+        \work{03/2017}{05/2019}{MSc. Student Research}
+          {\unicampA}
+          {\textbf{Dissertation}: xxxxxxxxxxxxxxx~\cite{PatrickJahnke2015,Muller2016} (Funded by Samsung)}{
+            \begin{itemize}[leftmargin=*]
+              \item Identification of damages using decision trees;
+              \item \textbf{Tools}: Python, Scikit-learn, Lab-View, Numpy, Matplotlib.
+              \item[] \begin{flushright}
+                \Google \nintendo 
+              \end{flushright}
+            \end{itemize}
+          }
+      \section*{Industrial Performance}
+        \work{02/2015}{02/2017}{Programmer}
+          {\slb}{
+          \begin{itemize}[leftmargin=*]
+            \item \lipsum[1]
+            \item Inspections 
+              \begin{itemize}[leftmargin=*]
+                \item Shell measurement 
+                \item Ring gear measurement
+              \end{itemize}
+          \end{itemize}
+          }{~}
+          
+      \justify
+      \bibliographystyle{IEEEtran}
+      \bibliography{references}
+    \end{adjustwidth}
+  \end{paracol}
+\end{document}

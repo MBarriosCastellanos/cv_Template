@@ -1,0 +1,66 @@
+%=================================== Document ==================================
+\usepackage[a4paper, bindingoffset=0.5mm, footskip=0.5mm, 
+  left=0mm, right=3mm, top=10mm, bottom=10mm ]{geometry}
+\usepackage[utf8]{inputenc}             % Accentuation
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}                     % define new colors
+\usepackage{paracol}                    % for parallel columns
+\usepackage{changepage}                 % adjust width parallel columns
+\usepackage[sfdefault]{ClearSans}       % change font
+\usepackage{enumitem}                   % reduce margin of itemize items
+\usepackage{emptypage}                  % empty page number
+  \pagestyle{empty}         
+\usepackage{etoolbox}                   % broke lines in bibliography
+  \hbadness 10000
+  \tolerance 10000
+\usepackage{microtype}                  % ensure justify
+\usepackage{ragged2e}
+\usepackage{lipsum}
+%================================== Equations ===================================
+\usepackage{amsmath}
+%=================================== Images =====================================
+\usepackage{graphicx}                   % cut images
+\usepackage{float}                      % Make the images float
+%==================================== Tables ====================================
+\usepackage{multicol}                   % multi-columns
+\usepackage{multirow}                   % multi rows
+\usepackage{tabularx}                   % tables
+\usepackage{pbox}                       % Pear for tables
+\usepackage{array}
+%==================================== Tikz =====================================
+\usepackage{tikz}                       % Construct tikz plots
+\usepackage{pgfplots}                   % For tikz plots use pgf
+\pgfplotsset{compat=1.14}
+\usetikzlibrary{calc}                   % calculation in tik z
+\usepackage{smartdiagram}               % smart diagram
+\smartdiagramset{
+    bubble center node font = \footnotesize,
+    bubble node font = \footnotesize,
+    % specifies the minimum size of the bubble center node
+    bubble center node size = 0.3cm,
+    %  specifies the minimum size of the bubbles
+    bubble node size = 0.3cm,
+    % specifies which is the distance between the bubble center node and the other bubbles
+    distance center/other bubbles = 0.3cm,
+    % define the list of colors usable in the diagram
+    set color list = {red4, gray3, gray4, red3,  gray1, gray2},
+    % sets the opacity at which the bubbles are shown
+    bubble fill opacity = 0.6,
+    % sets the opacity at which the bubble text is shown
+    bubble text opacity = 1,
+}
+%==================================== links ====================================
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,           % no lik border-color
+    linkcolor=black!80,         
+    citecolor=teal, 
+    urlcolor=darkgray, 
+    breaklinks=true,
+}
+\usepackage{xurl}
+%============================== Literature review ===============================
+\usepackage{cite}
+\usepackage{pdfpages}                   % Insert pdf pages
+%==================================== Icons =====================================
+\usepackage{fontawesome}
